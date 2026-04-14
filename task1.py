@@ -1,0 +1,21 @@
+from selenium.webdriver import Chrome,ChromeOptions
+from time import sleep
+opts = ChromeOptions()
+opts.add_experimental_option("detach",True)
+driver = Chrome(opts)
+
+driver.get("https://www.amazon.in/")
+sleep(3)
+driver.minimize_window()
+sleep(3)
+driver.maximize_window()
+sleep(3)
+driver.get("https://www.flipkart.com/")
+sleep(5)
+driver.back()
+sleep(2)
+driver.forward()
+sleep(2)
+driver.refresh()
+sleep(3)
+driver.close()
